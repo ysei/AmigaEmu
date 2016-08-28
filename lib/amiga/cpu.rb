@@ -69,6 +69,11 @@ module Amiga
       @regs[:d][reg]=data
       @flags[:n]=true if data<0
       @flags[:z]=true if data==0
+#     if data<0
+#	@flags[:n]=true
+#     elsif data==0
+#	@flags[:z]=true
+#     end
       @flags[:v]=false
       @flags[:c]=false
     end
@@ -134,6 +139,11 @@ module Amiga
       set_dst(_args[1][0], _args[2][0], _args[2][1], data)
       @flags[:n]=true if data<0
       @flags[:z]=true if data==0
+#     if data<0
+#	@flags[:n]=true
+#     elsif data==0
+#	@flags[:z]=true
+#     end
       @flags[:v]=false
       @flags[:c]=false
     end
@@ -189,6 +199,11 @@ module Amiga
       set_dst(_args[0][0], _args[1][0], _args[1][1], data)
       @flags[:n]=true if data<0
       @flags[:z]=true if data==0
+#     if data<0
+#	@flags[:n]=true
+#     elsif data==0
+#	@flags[:z]=true
+#     end
       @flags[:v]=false
       @flags[:c]=false
     end
